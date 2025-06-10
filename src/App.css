@@ -1,0 +1,120 @@
+/* Base Styles */
+.App {
+  min-height: 100vh;
+  background-color: #1b2736; /* Lighter background */
+}
+
+.main-content {
+  margin-top: 80px; /* Adjusted for TopContainer */
+  padding: 20px;
+}
+
+/* Product Cards - Enhanced Visibility */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Light background for images */
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  padding: 15px 0;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e74c3c; /* Red color for price to stand out */
+}
+
+/* View Toggle Buttons */
+.user-view-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-right: 15px;
+}
+
+.user-view-toggle button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-view-toggle button {
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+}
+
+.user-view-toggle button.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.user-view-toggle button:hover {
+  background-color: #d6eaf8;
+}
+
+/* Color Enhancements for Toys */
+.toy-category {
+  position: relative;
+}
+
+.toy-category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #f39c12; /* Orange accent for toys */
+  border-radius: 4px 0 0 4px;
+}
+
+/* Responsive Grid for Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
